@@ -5,6 +5,7 @@ Description: Esse plugin foi desenvolvido com o intuito de o usuário adicionar 
 Version: 1.0
 Author: Olá Ormundos
 Author URI: https://github.com/olaormundos/
+Text Domain: receitas
 Requires at least: 5.0
 Tested up to: 5.4
 Requires PHP: 7.4
