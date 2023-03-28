@@ -23,8 +23,10 @@ if(!function_exists('add_action')){
 
 // Includes
 include('includes/activate.php');
+include('includes/init.php');
 
 // Hooks
 register_activation_hook(__FILE__, 'olmbr_activate_plugin');
+add_action('init', 'olmbr_receitas_init');
 
 // Shortcodes
