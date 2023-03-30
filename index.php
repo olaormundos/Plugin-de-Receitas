@@ -31,5 +31,6 @@ include('includes/admin/admin_init.php');
 register_activation_hook(RECEITA_PLUGIN_URL, 'olmbr_activate_plugin');
 add_action('init', 'olmbr_receitas_init');
 add_action('admin_init', 'olmbr_receitas_admin_init');
+add_action('save_post_receita', 'olmbr_save_post_admin', 10, 3);
 
 // Shortcodes
