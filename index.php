@@ -20,6 +20,7 @@ if(!function_exists('add_action')){
 }
 
 // Setup
+define('RECEITA_PLUGIN_URL', __FILE__);
 
 // Includes
 include('includes/activate.php');
@@ -27,7 +28,7 @@ include('includes/init.php');
 include('includes/admin/admin_init.php');
 
 // Hooks
-register_activation_hook(__FILE__, 'olmbr_activate_plugin');
+register_activation_hook(RECEITA_PLUGIN_URL, 'olmbr_activate_plugin');
 add_action('init', 'olmbr_receitas_init');
 add_action('admin_init', 'olmbr_receitas_admin_init');
 
