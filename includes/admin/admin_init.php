@@ -17,3 +17,19 @@
       'high'
     );
   }
+
+  function olmbr_save_post_admin($post_id, $post, $update){
+    if(!$update){
+      return;
+    }
+    $receita_data = array(
+      'ingredientes'      =>      $_POST['olmbr_ingredientes'],
+      'tempo'             =>      $_POST['olmbr_tempo'],
+      'utensilios'        =>      $_POST['olmbr_utensilios'],
+      'dificuldade'       =>      $_POST['olmbr_dificuldade'],
+      'tipo'              =>      $_POST['olmbr_tipo']
+    );
+
+    update_post_meta($post_id, 'receita_data', $receita_data);
+    
+  }
