@@ -27,6 +27,8 @@ include('includes/activate.php');
 include('includes/init.php');
 include('includes/admin/admin_init.php');
 include('includes/filter-content.php');
+include('includes/enqueue.php');
+include('includes/voto-receita.php');
 
 // Hooks
 register_activation_hook(RECEITA_PLUGIN_URL, 'olmbr_activate_plugin');
@@ -34,5 +36,8 @@ add_action('init', 'olmbr_receitas_init');
 add_action('admin_init', 'olmbr_receitas_admin_init');
 add_action('save_post_receita', 'olmbr_save_post_admin', 10, 3);
 add_filter('the_content', 'olmbr_filter_receita_content');
+add_action('wp_enqueue_scripts', 'olmbr_enqueue_scripts', 100);
+add_action('wp_ajax_olmbr_voto_receita', 'olmbr_voto_receita');
+add_action('wp_ajax_nopriv_olmbr_voto_receita', 'olmbr_voto_receita');
 
 // Shortcodes
